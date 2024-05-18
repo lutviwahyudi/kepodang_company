@@ -4,6 +4,13 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px;
+ }
+
 .navbar-logo h4{
     margin-top: 5px;
     padding: 0;
@@ -31,3 +38,42 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
+ .hamburger {
+     display: none;
+     flex-direction: column;
+     cursor: pointer;
+ }
+
+ .hamburger div {
+     width: 25px;
+     height: 3px;
+     background-color: white;
+     margin: 4px 0;
+ }
+
+ /* Responsive styles */
+ @media (max-width: 768px) {
+     .navbar-list {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         text-align: center;
+     }
+
+     .navbar-list li {
+         margin: 10px 0;
+     }
+
+     .navbar-list a {
+         width: 100%;
+     }
+
+     .hamburger {
+         display: flex;
+     }
+
+     .navbar-list.active {
+         display: flex;
+     }
+ }
